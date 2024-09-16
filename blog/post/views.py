@@ -1,23 +1,14 @@
-<<<<<<< HEAD
 from django.shortcuts import render, redirect, get_object_or_404
 from .model import Post
 from .forms import PostForm
 
 # Create your views here.
 
-=======
-from django.shortcuts import render, redirect, get, get_list_or_404
-from .models import Post
-from .forms import PostForm 
-
-# Create your views here.
->>>>>>> e5ff280 (creacion del formulario)
 def crear_post(request):
     if request.method == "POST":
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-<<<<<<< HEAD
             post.autor = request.user
             post.save()
             return redirect('lista_publicaciones')
@@ -48,9 +39,3 @@ def eliminar_post(request, pk):
     if request.method == "POST":
         publicacion.delete()
         return redirect(request, 'post/eliminar_post.html', {'post' : publicacion})        
-=======
-            post.autor
-
-
-
->>>>>>> e5ff280 (creacion del formulario)
