@@ -7,9 +7,9 @@
 <p>{{ post.content }}</p>
 
 <a href="{% url 'editar_publicacion' post.pk %}">Editar</a>
-<form method="post" action="{% url 'eliminar_publicacion' post.pk %}" style="display:inline;">
+<form method="post" action="{% url 'eliminar_post' post.pk %}" style="display:inline;">
     {% csrf_token %}
     <button type="submit">Eliminar</button>
 </form>
-<a href="{% url 'lista_publicaciones' %}">Volver a la lista de publicaciones</a>
+<a href="{% url 'ver_post' %}">Volver a la lista de publicaciones</a>
 {% endblock %}

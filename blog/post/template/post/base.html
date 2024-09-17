@@ -12,7 +12,7 @@
         <nav>
             <ul>
                 <li><a href="{% url 'lista_publicaciones' %}">Inicio</a></li>
-                <li><a href="{% url 'crear_publicacion' %}">Crear Publicación</a></li>
+                <li><a href="{% url 'crear_post' %}">Crear Publicación</a></li>
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
                 {% else %}
