@@ -50,6 +50,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+LOGIN_REDIRECT_URL = 'lista_publicaciones' 
+LOGOUT_REDIRECT_URL = 'lista_publicaciones'
+
 ROOT_URLCONF = 'blog.urls'
 
 TEMPLATES = [
